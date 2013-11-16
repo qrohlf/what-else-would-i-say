@@ -70,7 +70,7 @@ function ExquisiteCorpse() {
         //Split it into sentences (regex credit: http://stackoverflow.com/a/5553924)
         var sentences = status.match(/[^.!?\s][^.!?]*(?:[.!?](?!['"]?\s|$)[^.!?]*)*[.!?]?['"]?(?=\s|$)/g);
         for (var i=0; i<sentences.length; i++) {
-            if (sentences[i].match(/(http:)/).length > 0) continue; //No urls, plz.
+            if (sentences[i].match(/(http:)/) != null) continue; //No urls, plz.
             //hack for abbreviations
             if (sentences[i].match(abbreviations) > 0 && i+1 < sentences.length) {
                 parseSentence(sentences[i] + sentences[i+1]);
