@@ -21,7 +21,8 @@ function share(event) {
       name: user_name+'Bot says:',
       link: 'http://what-else-would-i-say.com',
       caption: ' ',
-      description: $(event.target).prev().text()
+      description: $(event.target).prev().text(),
+      picture: 'http://what-else-would-i-say.com/img/pic.png'
     }, function(response){});
 }
 
