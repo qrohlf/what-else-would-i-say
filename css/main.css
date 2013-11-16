@@ -9,7 +9,6 @@
 }
 
 html {
-    border-top: 8px solid $accent-dark;
     padding: 2rem 0;
     font-size: 18px;
     color: #FFF;
