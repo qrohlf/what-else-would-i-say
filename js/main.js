@@ -1,7 +1,7 @@
 var model = new ExquisiteCorpse();
 
 $('#generate').click(function() {
-    var count = 2+Math.floor((Math.random()*5));
+    var count = 2+Math.floor((Math.random()*3));
     console.log(count);
     var div = $('<div><p>'+model.generate(count)+'</p>')
     var link = $('<a class="share">share on facebook</a></div>');
