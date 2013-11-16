@@ -1,3 +1,5 @@
+  var user_name;
+
   window.fbAsyncInit = function() {
   FB.init({
     appId      : '465463090241162', // App ID
@@ -17,10 +19,10 @@
       // The response object is returned with a status field that lets the app know the current
       // login status of the person. In this case, we're handling the situation where they 
       // have logged in to the app.
-      testAPI();
       $('#login').html('<span class="icomoon">f</span> logged in').fadeOut(600, function() {
         $('#generate').fadeTo(400, 1);
       });
+      getName();
       spoolStatus();
     } else if (response.status === 'not_authorized') {
       // In this case, the person is logged into Facebook, but not into the app, so we call
@@ -53,10 +55,9 @@
 
   // Here we run a very simple test of the Graph API after login is successful. 
   // This testAPI() function is only called in those cases. 
-  function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
+  function getName() {
     FB.api('/me', function(response) {
-      console.log('Good to see you, ' + response.name + '.');
+      user_name = response.first_name;
     });
     
   }

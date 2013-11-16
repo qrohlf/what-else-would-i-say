@@ -91,6 +91,8 @@ footer {
     position:absolute;
     bottom:0;
     left:0;
+    font-size: .75rem;
+    font-family: 'Lato', sans-serif;
 }
 
 footer:before {

@@ -1,7 +1,9 @@
 var model = new ExquisiteCorpse();
 
 $('#generate').click(function() {
-    var div = $('<div><p>'+model.generate(2+Math.floor((Math.random()*5)))+'</p>')
+    var count = 2+Math.floor((Math.random()*5));
+    console.log(count);
+    var div = $('<div><p>'+model.generate(count)+'</p>')
     var link = $('<a class="share">share on facebook</a></div>');
     link.click(share);
     div.append(link);
@@ -13,13 +15,14 @@ $('#login').click(function() {
 });
 
 function share(event) {
-    console.log($(event.target).prev().text());
+    console.log();
     FB.ui({
       method: 'feed',
-      name: 'name',
+      name: user_name+'Bot says:',
       link: 'http://what-else-would-i-say.com',
-      caption: 'An example caption',
-      description: 'An example description'
+      caption: ' ',
+      description: $(event.target).prev().text(),
+      picture: 'http://what-else-would-i-say.com/img/pic.png'
     }, function(response){});
 }
 
