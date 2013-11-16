@@ -1,0 +1,148 @@
+@charset "UTF-8";
+/* le 'quick and dirty' css reset */
+* {
+    padding: 0;
+    margin:  0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    border-top: 8px solid $accent-dark;
+    padding: 2rem 0;
+    font-size: 18px;
+    color: #FFF;
+    background: #507099;
+    min-height: 100%;
+}
+
+body {
+    width: 75%;
+    max-width: 700px;
+    min-width: 320px;
+    margin: 2rem auto;
+    padding-bottom: 8rem; /* footer */
+    font-family: 'Quattrocento Sans', sans-serif;
+    text-align: center;
+    position: relative;
+}
+
+header {
+    margin-bottom: 3rem;
+}
+
+#output {
+
+}
+
+#output div {
+    word-wrap: break-word;
+    padding: 1rem 0;
+}
+
+#output div:before {
+    content: "•••";
+    display: block;
+    width: 100%;
+}
+
+#output p:before {
+    content: "“";
+}
+
+#output div:first-child, #output div:first-child .share, #output div:hover, #output div:hover .share {
+    opacity: 1;
+}
+
+#output div {
+    opacity: .2;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+#output div:first-child:before {
+    display: none;
+}
+
+.share {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: .75rem;
+    text-decoration: underline;
+    display: block;
+    margin-top: .5rem;
+    text-align: right;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+footer {
+    width:100%;
+    height:8rem;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+
+footer:before {
+    content: "•••";
+    display: block;
+    width: 100%;
+    margin: 4rem auto .5rem auto;
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 4rem;
+    font-weight: 300;
+    color: #FFF;
+}
+
+a:hover {
+ cursor:pointer;
+}
+
+a, a:visited {
+    color: #FFF;
+    text-decoration: underline;
+}
+
+.button {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    display: inline-block;
+    border: 1px solid #FFF;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    color: #FFF;
+    text-decoration: none;
+}
+
+#buttons {
+    text-align: center;
+    position: relative;
+    height: 6rem;
+}
+
+#buttons .wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#generate {
+    opacity: 0;
+}
+
+.icomoon {
+    font-family: 'icomoon';
+}
